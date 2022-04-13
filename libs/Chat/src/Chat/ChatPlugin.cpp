@@ -4,6 +4,8 @@
 
 #include <QQmlEngine>
 
+#include <QDebug>
+
 void
 ChatPlugin::registerTypes(const char *uri)
 {
@@ -14,5 +16,6 @@ ChatPlugin::registerTypes(const char *uri)
 
 void ChatPlugin::initializeEngine(QQmlEngine *engine, const char *uri)
 {
-    engine->addImportPath("qrc:///");
+    qDebug() << "ChatPlugin::initializeEngine: " << uri << Qt::endl;
+    //engine->addImportPath("qrc:/...");
 }
