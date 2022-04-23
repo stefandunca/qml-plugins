@@ -5,14 +5,16 @@
 
 int main(int argc, char *argv[])
 {
+    //qputenv("QML_IMPORT_TRACE", "1");
+
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
 
-    auto pluginDir = QCoreApplication::applicationDirPath() + "/../../libs/Chat";
-    qDebug() << pluginDir;
+    engine.addPluginPath(QCoreApplication::applicationDirPath() + "/../../libs/Chat");
+    engine.addPluginPath(QCoreApplication::applicationDirPath() + "/../../libs/Communities");
 
-    engine.addPluginPath(pluginDir);
+    engine.addImportPath("qrc:/");
 
     const QUrl url("qrc:/main.qml");
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
