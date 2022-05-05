@@ -1,0 +1,4 @@
+module demo.Wallet
+plugin Wallet
+
+WalletView 1.0 WalletView.qml

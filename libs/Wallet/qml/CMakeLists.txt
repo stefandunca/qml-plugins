@@ -5,7 +5,7 @@ list(REMOVE_DUPLICATES QML_IMPORT_PATH)
 
 target_sources(${PROJECT_NAME}
     PUBLIC
-        ${CMAKE_CURRENT_SOURCE_DIR}/Communities-qml.qrc
+        ${CMAKE_CURRENT_SOURCE_DIR}/Wallet-qml.qrc
 
     PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.txt

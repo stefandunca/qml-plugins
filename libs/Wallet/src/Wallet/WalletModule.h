@@ -2,7 +2,7 @@
 
 #include <QObject>
 
-class CommunitiesModule: public QObject {
+class WalletModule: public QObject {
     Q_OBJECT
 public:
 

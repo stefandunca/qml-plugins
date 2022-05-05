@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>demo/Communities/CommunitiesView.qml</file>
-        <file>demo/Communities/qmldir</file>
-    </qresource>
-</RCC>

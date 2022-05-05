@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
 
     engine.addPluginPath(QCoreApplication::applicationDirPath() + "/../../libs/Chat");
-    engine.addPluginPath(QCoreApplication::applicationDirPath() + "/../../libs/Communities");
+    engine.addPluginPath(QCoreApplication::applicationDirPath() + "/../../libs/Wallet");
 
     engine.addImportPath("qrc:/");
 

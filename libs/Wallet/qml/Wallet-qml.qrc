@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>demo/Wallet/WalletView.qml</file>
+        <file>demo/Wallet/qmldir</file>
+    </qresource>
+</RCC>
