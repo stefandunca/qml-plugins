@@ -11,8 +11,10 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
 
+    // TODO: build this from cmake configuration
     engine.addPluginPath(QCoreApplication::applicationDirPath() + "/../../libs/Chat");
     engine.addPluginPath(QCoreApplication::applicationDirPath() + "/../../libs/Wallet");
+    engine.addPluginPath(QCoreApplication::applicationDirPath() + "/../../libs/Wallet/libs/Transactions");
 
     engine.addImportPath("qrc:/");
 

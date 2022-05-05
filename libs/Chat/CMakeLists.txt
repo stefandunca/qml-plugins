@@ -15,6 +15,7 @@ add_subdirectory(qml)
 target_link_libraries(${PROJECT_NAME}
     PUBLIC
         Wallet
+        Transactions
 
     PRIVATE
         Qt5::Quick

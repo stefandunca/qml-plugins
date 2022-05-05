@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.19)
 
-project(Wallet)
+project(Transactions)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -11,11 +11,8 @@ add_library(${PROJECT_NAME} SHARED "")
 
 add_subdirectory(src)
 add_subdirectory(qml)
-add_subdirectory(libs)
 
 target_link_libraries(${PROJECT_NAME}
-    PUBLIC
-        Transactions
     PRIVATE
         Qt5::Quick
         Qt5::Qml
