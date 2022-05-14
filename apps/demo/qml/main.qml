@@ -6,12 +6,8 @@ import demo.App
 import demo.Chat
 import demo.Wallet
 
-Window {
-    width: 640
-    height: 480
-    visible: true
+AppWindow {
     title: qsTr(`QML Test: ${inAppQmlObject.cppValue}; ${inAppQmlComponent.qmlValue}`)
-
 
     StackView {
         id: stackView
