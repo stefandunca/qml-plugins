@@ -2,14 +2,15 @@ import QtQuick
 import QtQuick.Window
 import QtQuick.Controls
 
-import demo.Chat 1.0
-import demo.Wallet 1.0
+import demo.App
+import demo.Chat
+import demo.Wallet
 
 Window {
     width: 640
     height: 480
     visible: true
-    title: qsTr("Hello World")
+    title: qsTr(`QML Test: ${inAppQmlObject.cppValue}; ${inAppQmlComponent.qmlValue}`)
 
 
     StackView {
@@ -34,5 +35,13 @@ Window {
         WalletView {
             id: walletView
         }
+    }
+
+    InAppQmlObject {
+        id: inAppQmlObject
+    }
+
+    InAppQmlComponent {
+        id: inAppQmlComponent
     }
 }
