@@ -5,7 +5,7 @@ project(Wallet)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Quick Qml REQUIRED)
+find_package(Qt6 COMPONENTS Quick Qml REQUIRED)
 
 add_library(${PROJECT_NAME} SHARED "")
 
@@ -17,8 +17,8 @@ target_link_libraries(${PROJECT_NAME}
     PUBLIC
         Transactions
     PRIVATE
-        Qt5::Quick
-        Qt5::Qml
+        Qt6::Quick
+        Qt6::Qml
 )
 
 # install the shared library

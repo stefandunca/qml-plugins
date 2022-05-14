@@ -1,6 +1,6 @@
-import QtQuick 2.14
-import QtQuick.Window 2.14
-import QtQuick.Controls 2.14
+import QtQuick
+import QtQuick.Window
+import QtQuick.Controls
 
 import demo.Chat 1.0
 import demo.Wallet 1.0
@@ -24,7 +24,7 @@ Window {
         id: chatViewComponent
 
         ChatView {
-            onProcessTransaction: stackView.push(walletViewComponent.createObject(null, { transaction: transaction }))
+            onProcessTransaction: transaction => stackView.push(walletViewComponent.createObject(null, { transaction: transaction }))
         }
     }
 
@@ -35,5 +35,4 @@ Window {
             id: walletView
         }
     }
-
 }

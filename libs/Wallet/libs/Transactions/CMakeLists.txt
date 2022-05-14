@@ -2,20 +2,23 @@ cmake_minimum_required(VERSION 3.19)
 
 project(Transactions)
 
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
+set(QT_NO_CREATE_VERSIONLESS_FUNCTIONS true)
 
-find_package(Qt5 COMPONENTS Quick Qml REQUIRED)
+find_package(Qt6 6.3 COMPONENTS Quick Qml REQUIRED)
+qt6_standard_project_setup()
 
-add_library(${PROJECT_NAME} SHARED "")
+qt6_add_qml_module(${PROJECT_NAME}
+    URI demo.Transactions
+    VERSION 1.0
+    OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+)
 
 add_subdirectory(src)
-add_subdirectory(qml)
 
 target_link_libraries(${PROJECT_NAME}
     PRIVATE
-        Qt5::Quick
-        Qt5::Qml
+        Qt6::Quick
+        Qt6::Qml
 )
 
 # install the shared library
